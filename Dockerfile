@@ -29,7 +29,9 @@ RUN yum install -y \
   xz \
   file \
   vim-enhanced \
-  unixODBC-devel; \
+  unixODBC-devel \
+  mysql-connector-odbc \
+  sysstat; \
   yum -y clean all
 
 ADD install_xercesc280.sh /script/
