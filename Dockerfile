@@ -50,8 +50,8 @@ RUN /script/install_cmake3110.sh
 ADD install_cryptopp700.sh /script/
 RUN /script/install_cryptopp700.sh
 
-ADD install_googletest170.sh /script/
-RUN /script/install_googletest170.sh
+ADD install_googletest180.sh /script/
+RUN /script/install_googletest180.sh
 
 ADD install_python2714.sh /script/
 RUN /script/install_python2714.sh

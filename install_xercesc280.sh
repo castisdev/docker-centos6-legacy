@@ -11,4 +11,4 @@ cp -r include/xercesc /usr/include/
 cp lib/libxerces-c.so.28.0 /usr/lib/
 ln -sf /usr/lib/libxerces-c.so.28.0 /usr/lib/libxerces-c.so
 cd ~
-rm -rf Xerces-C_2_8_0 xerces-c-Xerces-C_2_8_0
+rm -rf Xerces-C_2_8_0* xerces-c-Xerces-C_2_8_0
