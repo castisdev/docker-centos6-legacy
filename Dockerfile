@@ -44,8 +44,8 @@ RUN yum-config-manager -y --add-repo https://yum.repos.intel.com/tbb/setup/intel
 ADD install_xercesc280.sh /script/
 RUN /script/install_xercesc280.sh
 
-ADD install_cmake3110.sh /script/
-RUN /script/install_cmake3110.sh
+ADD install_cmake3123.sh /script/
+RUN /script/install_cmake3123.sh
 
 ADD install_cryptopp700.sh /script/
 RUN /script/install_cryptopp700.sh
@@ -53,17 +53,17 @@ RUN /script/install_cryptopp700.sh
 ADD install_googletest180.sh /script/
 RUN /script/install_googletest180.sh
 
-ADD install_python2714.sh /script/
-RUN /script/install_python2714.sh
+ADD install_python2715.sh /script/
+RUN /script/install_python2715.sh
 
-ADD install_python365.sh /script/
-RUN /script/install_python365.sh
+ADD install_python367.sh /script/
+RUN /script/install_python367.sh
 
 ADD install_cpptools.sh /script/
 RUN /script/install_cpptools.sh
 
-ADD install_zsh550.sh /script/
-RUN /script/install_zsh550.sh
+ADD install_zsh562.sh /script/
+RUN /script/install_zsh562.sh
 
 ADD install_ninja182.sh /script/
 RUN /script/install_ninja182.sh
