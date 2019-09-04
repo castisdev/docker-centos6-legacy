@@ -44,29 +44,29 @@ RUN yum-config-manager -y --add-repo https://yum.repos.intel.com/tbb/setup/intel
 ADD install_xercesc280.sh /script/
 RUN /script/install_xercesc280.sh
 
-ADD install_cmake3123.sh /script/
-RUN /script/install_cmake3123.sh
+ADD install_cmake3152.sh /script/
+RUN /script/install_cmake3152.sh
 
-ADD install_cryptopp700.sh /script/
-RUN /script/install_cryptopp700.sh
+ADD install_cryptopp820.sh /script/
+RUN /script/install_cryptopp820.sh
 
 ADD install_googletest180.sh /script/
 RUN /script/install_googletest180.sh
 
-ADD install_python2715.sh /script/
-RUN /script/install_python2715.sh
+ADD install_python2716.sh /script/
+RUN /script/install_python2716.sh
 
-ADD install_python367.sh /script/
-RUN /script/install_python367.sh
+ADD install_python374.sh /script/
+RUN /script/install_python374.sh
 
 ADD install_cpptools.sh /script/
 RUN /script/install_cpptools.sh
 
-ADD install_zsh562.sh /script/
-RUN /script/install_zsh562.sh
+ADD install_zsh571.sh /script/
+RUN /script/install_zsh571.sh
 
-ADD install_ninja182.sh /script/
-RUN /script/install_ninja182.sh
+ADD install_ninja190.sh /script/
+RUN /script/install_ninja190.sh
 
 # set timezone
 RUN ln -snf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
