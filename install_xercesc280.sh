@@ -1,4 +1,5 @@
 #!/bin/bash -e
+set -x #echo on
 cd ~
 wget --no-check-certificate --content-disposition https://github.com/apache/xerces-c/archive/v2.8.0.tar.gz
 tar xf xerces-c-2.8.0.tar.gz

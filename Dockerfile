@@ -1,6 +1,8 @@
 # Pull base image
 FROM centos:6
 
+RUN sed -i -e 's/^mirrorlist/#mirrorlist/g' -e 's/^#baseurl=http:\/\/mirror.centos.org\/centos\/$releasever\//baseurl=http:\/\/vault.centos.org\/6.10\//g' /etc/yum.repos.d/CentOS-Base.repo
+
 # Install EPEL repo
 RUN yum install -y epel-release; yum -y clean all
 
@@ -33,7 +35,9 @@ RUN yum install -y \
   mysql-connector-odbc \
   sysstat \
   yum-utils \
-  gperftools-devel; \
+  gperftools-devel \
+  ccache \
+  libunwind-devel; \
   yum -y clean all
 
 # Install Intel TBB
@@ -44,8 +48,8 @@ RUN yum-config-manager -y --add-repo https://yum.repos.intel.com/tbb/setup/intel
 ADD install_xercesc280.sh /script/
 RUN /script/install_xercesc280.sh
 
-ADD install_cmake3170.sh /script/
-RUN /script/install_cmake3170.sh
+ADD install_cmake3191.sh /script/
+RUN /script/install_cmake3191.sh
 
 ADD install_cryptopp820.sh /script/
 RUN /script/install_cryptopp820.sh
@@ -56,23 +60,27 @@ RUN /script/install_googletest180.sh
 ADD install_openssl102u.sh /script/
 RUN /script/install_openssl102u.sh
 
-ADD install_python2717.sh /script/
-RUN /script/install_python2717.sh
+ADD install_python2718.sh /script/
+RUN /script/install_python2718.sh
 
-ADD install_python382.el6.sh /script/
-RUN /script/install_python382.el6.sh
+ADD install_python390.el6.sh /script/
+RUN /script/install_python390.el6.sh
 
 ADD install_cpptools.sh /script/
 RUN /script/install_cpptools.sh
 
+# cppcheck 빌드하려면 gcc 4.6 이상이 필요함
+# ADD install_cppcheck23.sh /script/
+# RUN /script/install_cppcheck23.sh
+
 ADD install_zsh58.el6.sh /script/
 RUN /script/install_zsh58.el6.sh
 
-ADD install_ninja1100.sh /script/
-RUN /script/install_ninja1100.sh
+ADD install_ninja1102.sh /script/
+RUN /script/install_ninja1102.sh
 
-ADD install_ffmpeg422.el6.sh /script/
-RUN /script/install_ffmpeg422.el6.sh
+ADD install_ffmpeg431.el6.sh /script/
+RUN /script/install_ffmpeg431.el6.sh
 
 # set timezone
 RUN ln -snf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
