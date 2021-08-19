@@ -48,8 +48,8 @@ RUN yum-config-manager -y --add-repo https://yum.repos.intel.com/tbb/setup/intel
 ADD install_xercesc280.sh /script/
 RUN /script/install_xercesc280.sh
 
-ADD install_cmake3202.sh /script/
-RUN /script/install_cmake3202.sh
+ADD install_cmake3211.sh /script/
+RUN /script/install_cmake3211.sh
 
 ADD install_cryptopp850.sh /script/
 RUN /script/install_cryptopp850.sh
@@ -63,8 +63,8 @@ RUN /script/install_openssl102u.sh
 ADD install_python2718.sh /script/
 RUN /script/install_python2718.sh
 
-ADD install_python395.el6.sh /script/
-RUN /script/install_python395.el6.sh
+ADD install_python396.el6.sh /script/
+RUN /script/install_python396.el6.sh
 
 ADD install_cpptools.sh /script/
 RUN /script/install_cpptools.sh
