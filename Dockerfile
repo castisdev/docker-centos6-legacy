@@ -50,8 +50,8 @@ RUN yum-config-manager -y --add-repo https://yum.repos.intel.com/tbb/setup/intel
 ADD install_xercesc280.sh /script/
 RUN /script/install_xercesc280.sh
 
-ADD install_cmake3211.sh /script/
-RUN /script/install_cmake3211.sh
+ADD install_cmake3212.sh /script/
+RUN /script/install_cmake3212.sh
 
 ADD install_cryptopp850.sh /script/
 RUN /script/install_cryptopp850.sh
