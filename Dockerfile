@@ -52,8 +52,8 @@ RUN yum-config-manager -y --add-repo https://yum.repos.intel.com/tbb/setup/intel
 ADD install_xercesc280.sh /script/
 RUN /script/install_xercesc280.sh
 
-ADD install_cmake3221.sh /script/
-RUN /script/install_cmake3221.sh
+ADD install_cmake3222.sh /script/
+RUN /script/install_cmake3222.sh
 
 ADD install_cryptopp860.sh /script/
 RUN /script/install_cryptopp860.sh
@@ -77,17 +77,20 @@ RUN /script/install_cpptools.sh
 # ADD install_cppcheck23.sh /script/
 # RUN /script/install_cppcheck23.sh
 
-ADD install_zsh58.el6.sh /script/
-RUN /script/install_zsh58.el6.sh
+ADD install_zsh581.el6.sh /script/
+RUN /script/install_zsh581.el6.sh
 
 ADD install_ninja1102.sh /script/
 RUN /script/install_ninja1102.sh
 
-ADD install_ffmpeg441.el6.sh /script/
-RUN /script/install_ffmpeg441.el6.sh
+ADD install_ffmpeg50.el6.sh /script/
+RUN /script/install_ffmpeg50.el6.sh
 
-ADD install_golang1176.sh /script/
-RUN /script/install_golang1176.sh
+ADD install_golang1177.sh /script/
+RUN /script/install_golang1177.sh
+
+ADD install_libwebp122.sh /script/
+RUN /script/install_libwebp122.sh
 
 # set timezone
 RUN ln -snf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
